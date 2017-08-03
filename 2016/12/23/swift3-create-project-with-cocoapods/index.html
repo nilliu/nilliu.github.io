@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Create project with CocoaPods in swift 3 · nilliu</title><meta name="description" content="Create project with CocoaPods in swift 3 - Nil"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon-old.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="nilliu"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/2017/01/06/portfolios/" target="_self" class="nav-list-link">PORTFOLIO</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/nilliu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Create project with CocoaPods in swift 3</h1><div class="post-info">Dec 23, 2016</div><div class="post-content"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>First step -&gt; Get <code>CocoaPods</code> install on your Mac.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo gem install cocoapods</div></pre></td></tr></table></figure>
+<p>once <code>CocoaPods</code> successfully installed,<br>enter this command to complete the setup.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pod setup --verbose</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>Let’s try to create a new project “JustCalc”,<br><img src="JustCalc-01.png" alt="JustCalc-01"><br><img src="JustCalc-02.png" alt="JustCalc-02"></p>
+<p>after project created and saved.<br>get back into command line,</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> ~/PATH/TO/XCODE/PROJECT/JustCalc</div><div class="line">$ pod init</div></pre></td></tr></table></figure>
+<p><div class="tip">what if you occurs error like following …</div><br><img src="JustCalc-03.png" alt="JustCalc-03"></p>
+<p>just try to uninstall old version of <code>nanaimo</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo gem uninstall nanaimo</div><div class="line"><span class="comment"># then choose old version to uninstall</span></div></pre></td></tr></table></figure></p>
+<p><img src="JustCalc-04.png" alt="JustCalc-04"></p>
+<p>and then re-issue the <code>pod init</code> command</p>
+<p>this will create a <code>Podfile</code> for your project.<br>you can use any <strong>PLAIN-TEXT</strong> editor to edit it.(e.g. ATOM)<br>here I recommended you to edit in <code>Xcode</code>.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ open <span class="_">-a</span> Xcode Podfile</div></pre></td></tr></table></figure>
+<p>add the pods you need.<br>in this case, I add 2 of them.<br><img src="JustCalc-05.png" alt="JustCalc-05"></p>
+<p>save the <code>Podfile</code>,<br>then install them with following command<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pod install</div></pre></td></tr></table></figure></p>
+<p><img src="JustCalc-06.png" alt="JustCalc-06"></p>
+<p>as it said,<br>you now should close the original Xcode project<br>and move on with new file <code>JustCalc.xcworkspace</code> file.</p>
+</div></article></div></section><footer><div class="paginator"><a href="/2017/01/05/setup-your-own-parse-server/" class="prev">PREV</a><a href="/2016/12/23/customize-atom-package-insert-timestamp/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'nilliu';
+var disqus_identifier = '2016/12/23/swift3-create-project-with-cocoapods/';
+var disqus_title = 'Create project with CocoaPods in swift 3';
+var disqus_url = 'http://yoursite.com/2016/12/23/swift3-create-project-with-cocoapods/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//nilliu.disqus.com/count.js" async></script><div class="copyright"><p>© 2016 - 2017 <a href="http://yoursite.com">Nil</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><!--script(async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML")--></body></html><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97730441-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

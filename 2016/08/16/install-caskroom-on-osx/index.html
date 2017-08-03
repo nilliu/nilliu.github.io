@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Caskroom on OS X (w/ quicklook-plugins) · nilliu</title><meta name="description" content="Caskroom on OS X (w/ quicklook-plugins) - Nil"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon-old.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="nilliu"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/2017/01/06/portfolios/" target="_self" class="nav-list-link">PORTFOLIO</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/nilliu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Caskroom on OS X (w/ quicklook-plugins)</h1><div class="post-info">Aug 16, 2016<a href="http://blog.visioncan.com/2014/introducing-cask/" target="_blank" title="http://blog.visioncan.com/2014/introducing-cask/" class="post-from">翻譯 · 原文地址</a></div><div class="post-content"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>Caskroom(a.k.a. cask) 讓 OS X 安裝程式更有效率</p>
+<p>Need install whole bunch of program?<br>try <a href="http://blog.visioncan.com/2014/introducing-cask/caskroom.io" target="_blank" rel="external">Caskroom</a>!</p>
+<p>Quote from their official website:<br><em><em> “To install, drag this icon …” - no more! </em></em></p>
+<a id="more"></a>
+<h6 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h6><p>1st, you will need Xcode Command Tool<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ xcode-select --install</div><div class="line"><span class="comment"># check</span></div><div class="line">$ xcode-select -p</div></pre></td></tr></table></figure></p>
+<p>2nd, get <a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a>, that’s kind of required if you’re a developer.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)</span>"</span></div></pre></td></tr></table></figure></p>
+<p>3rd, let’s get some good pieces!<br>e.g. install quicklook plugins for script filetype<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew cask install qlcolorcode</div></pre></td></tr></table></figure></p>
+<p><img src="https://github.com/sindresorhus/quick-look-plugins/raw/master/screenshots/QLColorCode.png" alt="qlcolorcode"></p>
+<p>e.g. quicklook plugins for peeking into zip files<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew cask install betterzipql</div></pre></td></tr></table></figure></p>
+<p><img src="https://github.com/sindresorhus/quick-look-plugins/raw/master/screenshots/BetterZipQL.png" alt="betterzipql"></p>
+<p>e.g. quicklook plugins for preview CSV files<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew cask install quicklook-csv</div></pre></td></tr></table></figure></p>
+<p><img src="https://github.com/sindresorhus/quick-look-plugins/raw/master/screenshots/QuickLookCSV.png" alt="quicklook-csv"></p>
+<p>e.g. quicklook plugins for preview <code>patch</code> files nicely<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew cask install qlprettypatch</div></pre></td></tr></table></figure></p>
+<p><img src="https://github.com/sindresorhus/quick-look-plugins/raw/master/screenshots/QLPrettyPatch.png" alt="qlprettypatch"></p>
+<p>e.g. quicklook plugins for Markdown files<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew cask install qlmarkdown</div></pre></td></tr></table></figure></p>
+<p><img src="https://github.com/sindresorhus/quick-look-plugins/raw/master/screenshots/QLMarkdown.png" alt="qlmarkdown"></p>
+<p>e.g. quicklook plugins for JSON data files<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew cask install quicklook-json</div></pre></td></tr></table></figure></p>
+<p><img src="https://github.com/sindresorhus/quick-look-plugins/raw/master/screenshots/QuickLookJSON.png" alt="quicklook-json"></p>
+<p>e.g. quicklook plugins for display image size and dimension<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew cask install qlimagesize</div></pre></td></tr></table></figure></p>
+<p><img src="https://github.com/sindresorhus/quick-look-plugins/raw/master/screenshots/qlImageSize.png" alt="qlimagesize"></p>
+<p>e.g. quicklook plugins for preview some suspicious packages<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew cask insatll suspicious-package</div></pre></td></tr></table></figure></p>
+<p><img src="https://github.com/sindresorhus/quick-look-plugins/raw/master/screenshots/SuspiciousPackage.png" alt="suspicious-package"></p>
+<p>e.g. quicklook plugins for NFO files<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew cask install quicknfo</div></pre></td></tr></table></figure></p>
+<p><img src="https://github.com/planbnet/QuickNFO/raw/master/examples/preview.png" alt="quicknfo"></p>
+<p>e.g. install some fonts<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ brew tap caskroom/fonts</div><div class="line">$ brew cask install font-source-code-pro</div><div class="line">$ brew cask install font-fontawesome</div></pre></td></tr></table></figure></p>
+<h6 id="移除"><a href="#移除" class="headerlink" title="移除"></a>移除</h6><p>裝了後悔怎麼辦? what if we regret to install?<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew cask uninstall &lt;package name&gt;</div></pre></td></tr></table></figure></p>
+<h6 id="搜尋"><a href="#搜尋" class="headerlink" title="搜尋"></a>搜尋</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew cask search &lt;package keyword&gt;</div></pre></td></tr></table></figure>
+<h6 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew cask update</div></pre></td></tr></table></figure>
+<blockquote>
+<p>cask 真的很好用啦<br>連 teamviewer, evernote, dropbox 什麼的都能裝喔!!!</p>
+</blockquote>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/08/16/swift3-getter-n-setter/" class="prev">PREV</a><a href="/2016/08/15/swift3-loop/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'nilliu';
+var disqus_identifier = '2016/08/16/install-caskroom-on-osx/';
+var disqus_title = 'Caskroom on OS X (w/ quicklook-plugins)';
+var disqus_url = 'http://yoursite.com/2016/08/16/install-caskroom-on-osx/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//nilliu.disqus.com/count.js" async></script><div class="copyright"><p>© 2016 - 2017 <a href="http://yoursite.com">Nil</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><!--script(async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML")--></body></html><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97730441-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

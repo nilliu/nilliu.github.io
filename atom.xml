@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>nilliu</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-07-17T21:55:04.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Nil</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javascript get unique array</title>
+    <link href="http://yoursite.com/2017/07/18/js-array-unique/"/>
+    <id>http://yoursite.com/2017/07/18/js-array-unique/</id>
+    <published>2017-07-17T21:52:38.000Z</published>
+    <updated>2017-07-17T21:55:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>good coding reference.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// for ECMAScript 5</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">onlyUnique</span>(<span class="params">value, index, self</span>) </span>&#123; </div><div class="line">    <span class="keyword">return</span> self.indexOf(value) === index;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// usage example:</span></div><div class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>, <span class="number">1</span>, <span class="string">'a'</span>, <span class="number">2</span>, <span class="string">'1'</span>];</div><div class="line"><span class="keyword">var</span> unique = a.filter( onlyUnique ); </div><div class="line"><span class="comment">// returns ['a', 1, 2, '1']</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// With ES6</span></div><div class="line"></div><div class="line"><span class="comment">// usage example:</span></div><div class="line"><span class="keyword">var</span> myArray = [<span class="string">'a'</span>, <span class="number">1</span>, <span class="string">'a'</span>, <span class="number">2</span>, <span class="string">'1'</span>];</div><div class="line"><span class="keyword">var</span> unique = myArray.filter(</div><div class="line">        (v, i, a) =&gt; a.indexOf(v) === i</div><div class="line">    ); </div><div class="line"></div><div class="line"><span class="comment">// unique is ['a', 1, 2, '1']</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// With ES6, native Set</span></div><div class="line"><span class="keyword">var</span> myArray = [<span class="string">'a'</span>, <span class="number">1</span>, <span class="string">'a'</span>, <span class="number">2</span>, <span class="string">'1'</span>];</div><div class="line"><span class="keyword">let</span> unique = [...new <span class="built_in">Set</span>(myArray)]; </div><div class="line"></div><div class="line"><span class="comment">// unique is ['a', 1, 2, '1']</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;p&gt;good coding reference.&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>algorithms review fibonacci</title>
+    <link href="http://yoursite.com/2017/07/09/algorithms-fibonacci/"/>
+    <id>http://yoursite.com/2017/07/09/algorithms-fibonacci/</id>
+    <published>2017-07-08T16:51:57.000Z</published>
+    <updated>2017-07-08T16:54:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><h6 id="1st-way-Top-down-Divide-and-Conquer-Approach"><a href="#1st-way-Top-down-Divide-and-Conquer-Approach" class="headerlink" title="1st way. Top-down Divide and Conquer Approach"></a>1st way. Top-down Divide and Conquer Approach</h6><h6 id="2nd-way-Bottom-up-Dynamic-Programming-Approach"><a href="#2nd-way-Bottom-up-Dynamic-Programming-Approach" class="headerlink" title="2nd way. Bottom-up Dynamic Programming Approach"></a>2nd way. Bottom-up Dynamic Programming Approach</h6><h6 id="3rd-way-Golden-Ratio-Approach"><a href="#3rd-way-Golden-Ratio-Approach" class="headerlink" title="3rd way. Golden Ratio Approach"></a>3rd way. Golden Ratio Approach</h6><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">class</span> Solution &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">climbStairs</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">        <span class="keyword">double</span> estim = <span class="number">0.4472135955</span> * <span class="built_in">pow</span>(<span class="number">1.618033988745</span>, n+<span class="number">1</span>);</div><div class="line">        <span class="keyword">return</span> ( <span class="built_in">abs</span>(<span class="built_in">ceil</span>(estim)-estim) &lt; <span class="built_in">abs</span>(estim-<span class="built_in">floor</span>(estim)) )? <span class="built_in">ceil</span>(estim) : <span class="built_in">floor</span>(estim);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">   <span class="keyword">int</span> n = <span class="number">7</span>;</div><div class="line">   Solution s;</div><div class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i &lt;= n; i++)</div><div class="line">      <span class="built_in">cout</span> &lt;&lt; <span class="string">"climbStairs("</span> &lt;&lt; i &lt;&lt; <span class="string">"): "</span> &lt;&lt; s.climbStairs(i) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">   </div><div class="line">   <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;h6 id=&quot;1st-way-Top-down-Divi
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>How to confirm your ssh key passphrase?</title>
+    <link href="http://yoursite.com/2017/04/20/check-ssh-password/"/>
+    <id>http://yoursite.com/2017/04/20/check-ssh-password/</id>
+    <published>2017-04-19T23:51:49.000Z</published>
+    <updated>2017-04-19T23:57:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -y</div></pre></td></tr></table></figure>
+<p>If you input the <code>correct</code> passphrase, it will show you the associated public key.<br>If you input the <code>wrong</code> passphrase, it will display load failed.<br>If the key has no passphrase, it will not prompt you for a passphrase and will immediately show you the associated public key. 😎😎😎</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;figure class=&quot;highlight bash
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>nodejs pipe interface</title>
+    <link href="http://yoursite.com/2017/03/22/nodejs-pipe/"/>
+    <id>http://yoursite.com/2017/03/22/nodejs-pipe/</id>
+    <published>2017-03-22T04:28:14.000Z</published>
+    <updated>2017-03-22T04:30:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><h6 id="Pipe-Interface-sample"><a href="#Pipe-Interface-sample" class="headerlink" title="Pipe Interface sample"></a>Pipe Interface sample</h6><p>this is really cool about the <code>Pipe Interface</code><br>you can just chain them together to get your job done.😍</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> r = fs.createReadStream(<span class="string">'file.txt'</span>)</div><div class="line"><span class="keyword">var</span> z = zlib.createGzip()</div><div class="line"><span class="keyword">var</span> w = fs.createWriteStream(<span class="string">'file.txt.gz'</span>)</div><div class="line">r.pipe(z).pipe(w)</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;h6 id=&quot;Pipe-Interface-sample
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>GitLab clone failed after upgarde to OS X Sierra</title>
+    <link href="http://yoursite.com/2017/03/21/gitlab-clone-permission-denied/"/>
+    <id>http://yoursite.com/2017/03/21/gitlab-clone-permission-denied/</id>
+    <published>2017-03-20T23:44:34.000Z</published>
+    <updated>2017-04-03T07:21:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>升到 OS X Sierra 之後<br>如果從 GitLab 下指令要做 clone<br>碰到以下奇怪的錯誤<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> git@gitlab.com:nilliu/pyScrapy.git</div><div class="line">Permission denied (publickey).</div><div class="line">fatal: Could not <span class="built_in">read</span> from remote repository.</div><div class="line"></div><div class="line">Please make sure you have the correct access rights</div><div class="line">and the repository exists.</div></pre></td></tr></table></figure></p>
+<p>可以試著用 <code>ssh-add -K</code><br>把缺失的 key 加到 SSH Agent</p>
+<p>又或者可以指定 key 去做 clone<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-agent sh -c <span class="string">'ssh-add ~/.ssh/id_rsa; git fetch user@host'</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;p&gt;升到 OS X Sierra 之後&lt;br&gt;如果從 G
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>import JSON data into your own mongoDB</title>
+    <link href="http://yoursite.com/2017/03/04/mongodb-import-json/"/>
+    <id>http://yoursite.com/2017/03/04/mongodb-import-json/</id>
+    <published>2017-03-03T19:37:01.000Z</published>
+    <updated>2017-03-20T23:55:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>just go with following command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ mongoimport \</div><div class="line">  --db yourDB --collection yourCollections \</div><div class="line">  --drop --file ./path/to/jsonfile.json</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;p&gt;just go with following com
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>javascript sort by value or key</title>
+    <link href="http://yoursite.com/2017/02/28/js-sort-on/"/>
+    <id>http://yoursite.com/2017/02/28/js-sort-on/</id>
+    <published>2017-02-27T23:23:16.000Z</published>
+    <updated>2017-02-27T23:27:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><h6 id="two-useful-sorting-functions"><a href="#two-useful-sorting-functions" class="headerlink" title="two useful sorting functions"></a>two useful sorting functions</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// sort on values</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">srt</span>(<span class="params">desc</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">   <span class="keyword">return</span> desc ? ~~(a &lt; b) : ~~(a &gt; b);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// sort on key values</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">keysrt</span>(<span class="params">key,desc</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">   <span class="keyword">return</span> desc ? ~~(a[key] &lt; b[key]) : ~~(a[key] &gt; b[key]);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<blockquote>
+<p>For your array you can sort on ‘name’ using:</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [ &#123;name:<span class="string">'bob'</span>, artist:<span class="string">'rudy'</span>&#125;</div><div class="line">           ,&#123;name:<span class="string">'johhny'</span>, artist:<span class="string">'drusko'</span>&#125;</div><div class="line">           ,&#123;name:<span class="string">'tiff'</span>, artist:<span class="string">'needell'</span>&#125;</div><div class="line">           ,&#123;name:<span class="string">'top'</span>, artist:<span class="string">'gear'</span>&#125;]</div><div class="line">          .sort(keysrt(<span class="string">'name'</span>));</div></pre></td></tr></table></figure>
+<blockquote>
+<p>You could also combine the sorting functions:</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">srt</span>(<span class="params">desc,key</span>) </span>&#123;</div><div class="line"> <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">   <span class="keyword">return</span> desc ? ~~(key ? a[key]&lt;b[key] : a &lt; b)</div><div class="line">               : ~~(key ? a[key] &gt; b[key] : a &gt; b);</div><div class="line">  &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>And use</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [ &#123;name:<span class="string">'bob'</span>, artist:<span class="string">'rudy'</span>&#125;</div><div class="line">               ,&#123;name:<span class="string">'johhny'</span>, artist:<span class="string">'drusko'</span>&#125;</div><div class="line">               ,&#123;name:<span class="string">'tiff'</span>, artist:<span class="string">'needell'</span>&#125;</div><div class="line">               ,&#123;name:<span class="string">'top'</span>, artist:<span class="string">'gear'</span>&#125;]</div><div class="line">              .sort(srt(<span class="literal">null</span>,<span class="string">'name'</span>));</div></pre></td></tr></table></figure>
+<blockquote>
+<p>all in one solution:</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">srt</span>(<span class="params">on,descending</span>) </span>&#123;</div><div class="line"> on = on &amp;&amp; on.constructor === <span class="built_in">Object</span> ? on : &#123;&#125;;</div><div class="line"> <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">   <span class="keyword">if</span> (on.string || on.key) &#123;</div><div class="line">     a = on.key ? a[on.key] : a;</div><div class="line">     a = on.string ? <span class="built_in">String</span>(a).toLowerCase() : a;</div><div class="line">     b = on.key ? b[on.key] : b;</div><div class="line">     b = on.string ? <span class="built_in">String</span>(b).toLowerCase() : b;</div><div class="line">     <span class="comment">// if key is not present, move to the end</span></div><div class="line">     <span class="keyword">if</span> (on.key &amp;&amp; (!b || !a)) &#123;</div><div class="line">      <span class="keyword">return</span> !a &amp;&amp; !b ? <span class="number">1</span> : !a ? <span class="number">1</span> : <span class="number">-1</span>;</div><div class="line">     &#125;</div><div class="line">   &#125;</div><div class="line">   <span class="keyword">return</span> descending ? ~~(on.string ? b.localeCompare(a) : a &lt; b)</div><div class="line">                     : ~~(on.string ? a.localeCompare(b) : a &gt; b);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"><span class="comment">// usage examples</span></div><div class="line"><span class="string">'a,z,x,y,a,b,B,Z,a,i,j,y'</span>.split(<span class="string">','</span>).sort( srt(&#123;string:<span class="literal">true</span>;&#125;) );</div><div class="line"> <span class="comment">//=&gt; ,a,a,b,B,i,j,x,y,y,z,Z</span></div><div class="line">[<span class="number">100</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">-1</span>].sort( srt() );</div><div class="line"> <span class="comment">//=&gt; -1,0,1,2,2,5,5,6,7,8,100</span></div><div class="line">[<span class="number">100</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">-1</span>].sort( srt(&#123;&#125;,<span class="literal">true</span>&#125;) );</div><div class="line"> <span class="comment">//=&gt; 100,8,7,6,5,5,2,2,1,0,-1</span></div><div class="line"><span class="keyword">var</span> objarr =</div><div class="line"> [ &#123;name:<span class="string">'bob'</span>, artist:<span class="string">'rudy'</span>&#125;</div><div class="line">  ,&#123;name:<span class="string">'Johhny'</span>, artist:<span class="string">'drusko'</span>&#125;</div><div class="line">  ,&#123;name:<span class="string">'Tiff'</span>, artist:<span class="string">'needell'</span>&#125;</div><div class="line">  ,&#123;name:<span class="string">'top'</span>, artist:<span class="string">'gear'</span>&#125;]</div><div class="line"> .sort( srt(&#123;key:<span class="string">'name'</span>,string:<span class="literal">true</span>&#125;, <span class="literal">true</span>) );</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;objarr.length;i+=<span class="number">1</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(objarr[i].name);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;two-useful-sorting-functions&quot;&gt;&lt;a href=&quot;#two-useful-sorting-functions&quot; class=&quot;headerlink&quot; title=&quot;two useful sorting functions&quot;&gt;&lt;/a&gt;two useful sorting functions&lt;/h6&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// sort on values&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;srt&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;desc&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;a,b&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; desc ? ~~(a &amp;lt; b) : ~~(a &amp;gt; b);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// sort on key values&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;keysrt&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;key,desc&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;a,b&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; desc ? ~~(a[key] &amp;lt; b[key]) : ~~(a[key] &amp;gt; b[key]);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>closures of javascript</title>
+    <link href="http://yoursite.com/2017/02/19/closures-of-javascript/"/>
+    <id>http://yoursite.com/2017/02/19/closures-of-javascript/</id>
+    <published>2017-02-18T16:11:07.000Z</published>
+    <updated>2017-02-18T16:38:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>since javascript will bound variable scope to its declaration,<br>or says it will keep the local context.<br>let’s define a function that will return a function for step add.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">step_iterator</span>(<span class="params">start, step</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> res = start;</div><div class="line">    start = start + step;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>then we can get an iterator by call the function<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numberWithStep2 = step_iterator(<span class="number">0</span>, <span class="number">2</span>);</div></pre></td></tr></table></figure></p>
+<p>and javascript will keep it as a function in <code>numberWithStep2</code></p>
+<p>each time we call the function <code>numberWithStep2</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">numberWithStep2();</div><div class="line"><span class="comment">// will return 0</span></div><div class="line">numberWithStep2();</div><div class="line"><span class="comment">// will return 2</span></div><div class="line">numberWithStep2();</div><div class="line"><span class="comment">// will return 4</span></div></pre></td></tr></table></figure></p>
+<p>pretty cool! huh?</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;p&gt;since javascript will boun
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Value of eval the time complexity</title>
+    <link href="http://yoursite.com/2017/02/04/value-of-eval-time-complexity/"/>
+    <id>http://yoursite.com/2017/02/04/value-of-eval-time-complexity/</id>
+    <published>2017-02-04T06:41:55.000Z</published>
+    <updated>2017-02-04T09:11:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>如果我們想要找<br>一個 <code>已排序由小到大的數列 array</code>, 數列左最小, 數列右最大<br>有 <code>n 個元素</code> 中 <code>指定數值 c</code><br>的 <code>第一個出現位置 fst</code> 和 <code>最後一個出現位置 lst</code><br>我們可以怎麼做呢?</p>
+<blockquote>
+<p>方法一</p>
+</blockquote>
+<p>我們可以用 loop 整個數列 <code>array</code>, 然後遂個比對元素, 發現等於 <code>c</code>, 記下來 <code>fst</code><br>繼續 loop 發現不等於 <code>c</code>, 記下來 <code>lst</code></p>
+<p>這樣的時間複雜度我們標記成 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n) </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p>
+<p>因為 <code>n</code> 個元素, 做 <code>n</code> 次比對<br>可能覺得一般般, 這效率好像蠻合理的</p>
+<p>但如果我們碰到 <code>n</code> 為 1 million 呢?<br>如果我們今天是把這個演算邏輯套到比較複雜的物件搜尋上的時候呢?<br>假設每次比對要花上 1 秒, 找一次要花 11 天才算的出結果<br>等到花兒都謝了…. 😱</p>
+<p>這時我們可以套用比較常見一點的演算法…</p>
+<a id="more"></a>
+<blockquote>
+<p>方法二 - 二分搜尋法 binary search</p>
+</blockquote>
+<p>我們多設定 3 個變數, <code>結果 result</code> 並預設為 -1,<br><code>搜尋範圍下限 low</code> 和 <code>搜尋範圍上限 high</code><br>然後把 <code>low</code> 指向數列第一個元素, <code>high</code> 指向數列最後一個元素<br>大概像這樣<br><img src="set.png" alt="set"></p>
+<p>用一個 while loop, 當 <code>low</code> 小於等於 <code>high</code><br>我們持續執行這個 while loop<br>在 loop 中我們計算 1 個變量,<br><code>搜尋範圍中間 mid</code> 指向範圍目前搜尋範圍的中間元素<br>如果這元素 小於 我們要找的數值<br>我們就把 <code>low</code> 調整為 <code>mid + 1</code><br>這樣下次搜尋範圍就是<br>原本搜尋範圍的左半邊(沒錯! 大刀一砍, 要找的剩二分之一)<br>反之, 如果 中間的元素 大於 我們要找的數值<br>我們把 <code>high</code> 調整為 <code>mid - 1</code><br>這樣下次就找右半邊就行<br>那如果中間值就是我們要找的數值 <code>c</code><br>那就太好了, 結束<br>如果沒找到, 就丟回還是預設值 -1 的 <code>result</code> 表示該數值沒有在數列中.<br>於是~ 我們可以以下列程式碼實做這個 binary search</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">binarySearch</span>(<span class="params">array, c, direction</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> low = <span class="number">0</span>, high = array.length - <span class="number">1</span>, mid, result = <span class="number">-1</span>;</div><div class="line">  <span class="keyword">while</span> (low &lt;= high) &#123;</div><div class="line">    mid = ((lo + hi) &gt;&gt; <span class="number">1</span>); <span class="comment">// bitwise operatoer, equal to Math.floor()</span></div><div class="line">    <span class="keyword">if</span> (array[mid] &lt; c)</div><div class="line">      low = mid + <span class="number">1</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (array[mid] &gt; c)</div><div class="line">      high = mid - <span class="number">1</span>;</div><div class="line">    <span class="keyword">else</span> &#123;</div><div class="line">      result = mid;</div><div class="line">      <span class="keyword">if</span> (direction == <span class="string">"first"</span>)</div><div class="line">        high = mid - <span class="number">1</span>;</div><div class="line">      <span class="keyword">else</span> &#123;</div><div class="line">        low = mid + <span class="number">1</span>;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> fst = binarySearch(array, c, <span class="string">"first"</span>);</div><div class="line"><span class="keyword">var</span> lst = binarySearch(array, c, <span class="string">"last"</span>);</div></pre></td></tr></table></figure>
+<p>這樣的時間複雜度是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>log</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(\log n) </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p>
+<p>沒錯! 效率好超多的啊!</p>
+<p>但這個時候<br>我們又很容易有一個迷思~<br>明明 <code>c = 10</code>, 又是已排序數列<br>所以往左遂個直接比對就可以求得第一個 <code>c</code> 了啊<br>這就是這篇文章的重點了<br>如果我們能習慣以時間複雜度去評估問題的話<br>讓我們試試</p>
+<p>這裡我們二分法求得 <code>mid = c</code> 的 case =&gt; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>log</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(\log n) </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span><br>往左迴圈的方式遂個比對 <code>mid - 1</code> 是否等於 <code>c</code> =&gt; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n) </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span><br>然後根據時間複雜度計算原則~ 取最大的~ 得到 =&gt; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n) </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p>
+<p>為什麼!!!??? 😫</p>
+<p>我們仔細思考一下~ 當最差的情形發生<br>例如數列是這樣<br><img src="worst.png" alt="worst"></p>
+<p>然後數列又不只上面這麼 7 個元素而是幾萬個元素時<br>真的就會是趨近 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n) </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span> 的效率</p>
+<p>所以~ 在 coding 時真的要不斷的用時間複雜度的觀念去檢視自己的程式片斷<br>才能避免落入陷阱 😂</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如果我們想要找&lt;br&gt;一個 &lt;code&gt;已排序由小到大的數列 array&lt;/code&gt;, 數列左最小, 數列右最大&lt;br&gt;有 &lt;code&gt;n 個元素&lt;/code&gt; 中 &lt;code&gt;指定數值 c&lt;/code&gt;&lt;br&gt;的 &lt;code&gt;第一個出現位置 fst&lt;/code&gt; 和 &lt;code&gt;最後一個出現位置 lst&lt;/code&gt;&lt;br&gt;我們可以怎麼做呢?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;方法一&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我們可以用 loop 整個數列 &lt;code&gt;array&lt;/code&gt;, 然後遂個比對元素, 發現等於 &lt;code&gt;c&lt;/code&gt;, 記下來 &lt;code&gt;fst&lt;/code&gt;&lt;br&gt;繼續 loop 發現不等於 &lt;code&gt;c&lt;/code&gt;, 記下來 &lt;code&gt;lst&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;這樣的時間複雜度我們標記成 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;O(n) &lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.75em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;strut bottom&quot; style=&quot;height:1em;vertical-align:-0.25em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;base textstyle uncramped&quot;&gt;&lt;span class=&quot;mord mathit&quot; style=&quot;margin-right:0.02778em;&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;mopen&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mord mathit&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;mclose&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;因為 &lt;code&gt;n&lt;/code&gt; 個元素, 做 &lt;code&gt;n&lt;/code&gt; 次比對&lt;br&gt;可能覺得一般般, 這效率好像蠻合理的&lt;/p&gt;
+&lt;p&gt;但如果我們碰到 &lt;code&gt;n&lt;/code&gt; 為 1 million 呢?&lt;br&gt;如果我們今天是把這個演算邏輯套到比較複雜的物件搜尋上的時候呢?&lt;br&gt;假設每次比對要花上 1 秒, 找一次要花 11 天才算的出結果&lt;br&gt;等到花兒都謝了…. 😱&lt;/p&gt;
+&lt;p&gt;這時我們可以套用比較常見一點的演算法…&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>jsFiddle with console.log</title>
+    <link href="http://yoursite.com/2017/01/25/jsFiddle-console-log/"/>
+    <id>http://yoursite.com/2017/01/25/jsFiddle-console-log/</id>
+    <published>2017-01-25T02:43:06.000Z</published>
+    <updated>2017-01-25T03:06:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>just add an <code>External Resources</code> 😙<br>with following link <a href="https://getfirebug.com/firebug-lite-debug.js" target="_blank" rel="external">https://getfirebug.com/firebug-lite-debug.js</a></p>
+<p>then you are ready to go with <code>console.log</code><br>exactly like testing in FireBug of FireFox.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;p&gt;just add an &lt;code&gt;External
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>setup Auth in mongodb</title>
+    <link href="http://yoursite.com/2017/01/24/mongodb-auth/"/>
+    <id>http://yoursite.com/2017/01/24/mongodb-auth/</id>
+    <published>2017-01-24T02:56:26.000Z</published>
+    <updated>2017-01-24T03:21:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>鑑於最近 mongodb 的裸奔事件頻傳<br>我也來設定一下我的 mongodb<br>順便玩一下 MongoHub for Mac 這套 GUI</p>
+<a id="more"></a>
+<p>以前 mongodb 的設計呢<br>是只要建立了 user 就會啟用 auth<br>但新版的不是這樣</p>
+<p>記錄一下我這次 2.6.10 版的設定情況</p>
+<p>首先</p>
+<p>在預設的設定下(listening local only)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ mongo</div><div class="line">&gt; use admin</div><div class="line">&gt; db.createUser(&#123;</div><div class="line">user: <span class="string">"root"</span>,</div><div class="line"><span class="built_in">pwd</span>: <span class="string">"password"</span>,</div><div class="line">  roles: [&#123;</div><div class="line">    role: <span class="string">"userAdminAnyDatabase"</span>, db: <span class="string">"admin"</span></div><div class="line">  &#125;]</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>然後</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo vim /etc/mongodb.conf</div></pre></td></tr></table></figure>
+<p>加上 server 的 public ip 到 <code>bind_ip</code><br>將 <code>auth = true</code> 給 uncomment</p>
+<div class="tip"><br>    You have to uncomment <code>auth = true</code> here<br><br>    to make server running with Authentication<br><br>    not just create users<br><br>    也就是如果你照以前的作法只建了 user<br><br>    那你就成了裸奔的 mongodb 管理者<br><br>    if u did,<br><br>    you will be one of mongodb admin<br><br>    who putting naked servers straight onto the Internet 😅<br><br></div>
+
+<p>最後<br>記得<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo service mongodb restart</div></pre></td></tr></table></figure></p>
+<div class="tip"><br>話說, 這裡還有一個坑~<br><br>if you type <code>service mongod start</code> on DigitalOcean build<br><br>it will always complain about <code>No such config file</code>…😫<br><br>但好像有一些 build 是 <code>mongod</code> 不是 <code>mongodb</code><br><br></div>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;鑑於最近 mongodb 的裸奔事件頻傳&lt;br&gt;我也來設定一下我的 mongodb&lt;br&gt;順便玩一下 MongoHub for Mac 這套 GUI&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>use UTF8 in python</title>
+    <link href="http://yoursite.com/2017/01/22/python-utf8/"/>
+    <id>http://yoursite.com/2017/01/22/python-utf8/</id>
+    <published>2017-01-22T02:51:29.000Z</published>
+    <updated>2017-01-22T02:58:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>forgot again and again,<br>so keep it here to make my life easier. 🙈</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="comment"># vim:fileencoding=utf-8</span></div><div class="line"></div><div class="line">print(<span class="string">"Hello, world. 哈囉世界!"</span>)</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;p&gt;forgot again and again,&lt;br
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>French note</title>
+    <link href="http://yoursite.com/2017/01/15/french-note/"/>
+    <id>http://yoursite.com/2017/01/15/french-note/</id>
+    <published>2017-01-14T19:48:41.000Z</published>
+    <updated>2017-08-03T08:31:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>法文筆記 -</p>
+<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><p>螞蟻 <code>la fourmi</code><br>我的手麻 <code>J&#39;ai des fourmis dans les bras.</code><br>我的腿麻 <code>J&#39;ai des fourmis dans les jambes.</code><br>袋子 <code>un sac</code><br>口袋 <code>une poche</code><br>工作 <code>travail</code></p>
+<p>不好意思我只懂一點點法文 <code>Désolée, Je comprends un peu de francais</code><br>我的法文不好 <code>Mon francais ne pa bien</code><br>禮貌性遲到15分鐘 <code>1/4 d’heure de politesse</code></p>
+<a id="more"></a>
+<h4 id="顏色-七彩繽紛的法文表達"><a href="#顏色-七彩繽紛的法文表達" class="headerlink" title="顏色 七彩繽紛的法文表達"></a>顏色 <a href="http://jessiea345.pixnet.net/blog/post/218130151" target="_blank" rel="external">七彩繽紛的法文表達</a></h4><p>漲紅了臉 <code>rouge de colère / de honte</code><br>羞紅了眼 <code>rougir jusqu&#39;au blanc des yeux</code><br>曬的跟龍蝦一樣紅 <code>rouge comme un homard</code><br>像鬥牛一樣失控了 <code>voir rouge</code><br>白的像雪 <code>blanc comme neige</code><br>給白卡．全權處理放手去做 <code>donner à qqn carte blanche</code><br>慘白的像白紙或阿斯匹靈<br><code>être blanc comme un linge / un cachet d&#39;asprine</code><br>白帽子就是白色的帽子．一模模一樣樣(廢話!)<br><code>C&#39;est bonnet blanc est blanc bonnet</code><br>白色怒火．生氣卻異常冷靜彷彿血都是冷的 <code>colère blanche</code><br>藍色怒火．正常脾氣發洩 <code>colère bleue</code><br>藍帶主廚一般 <code>être cordon bleu</code><br>藍色的花．多情種子 <code>être fleur bleue</code><br>灰(喝酒)的像驢子一樣．爛醉如泥 <code>gris comme un âne</code><br>灰(喝酒)的像波蘭人一樣．喝的太誇張 <code>être gris comme un Polonais</code><br>晚上貓都是灰的．關上燈都是一樣的(誤) <code>La nuit tous les chats sont gris</code><br>秘密軍師 <code>être l&#39;eminence gris de qqn</code><br>粉紅泡泡人生．酸溫室小花或沈浸在粉紅背景的人 <code>la vie en rose</code><br>看見粉紅大象．看到幻覺 <code>voir des éléphants roses</code><br>皮笑肉不笑 <code>rire jaune</code><br>黃的跟檸檬一樣．氣色不好 <code>être jaune comme un citron</code><br>黑色怒火．生人勿近 <code>colère noir</code><br>看到的都是暗的．很悲觀 <code>voir tout en noir</code><br>腦袋有黑洞 <code>avoir un trou noir</code><br>對方的剋星 <code>être la bête noire de qqn</code><br>黑色情緒．心情低落 <code>humeur noire</code><br>黑色幽默 <code>humour noir</code><br>黑色點子．厭世主義 <code>avoir des idées noires</code><br>天方夜譚．無法置信 <code>entendre des vertes et des pas mûres</code><br>綠手指．有雙很會種植的巧手 <code>la main verte</code><br>某人綠燈指示．准許 <code>donner des feux verts à qqn</code></p>
+<h4 id="求職"><a href="#求職" class="headerlink" title="求職"></a>求職</h4><p>公立大學 <code>l&#39;université</code><br>私立專業學校 <code>la grande école</code></p>
+<p>無期限合約 CDI(<code>Contrat à Durée Indéterminée</code>)<br>有期限合約 CDD(<code>Contrat à Durée Déterminée</code>)<br>臨時工作合約 CTT(<code>Contrat de Travail Temporaire</code>)<br>無期限短期合約 CDII(<code>CDE Intermittent</code>)</p>
+<p>全時工作 <code>Temps plein</code> 週工作時數 35 小時<br>半時工作 <code>Temps partiel</code> 小於 35 小時<br>一般職 <code>Non-Cadre</code><br>管理職/專業職 <code>Cadre</code></p>
+<p>實習合約 <code>Stage</code><br>學徒合約 <code>Apprentissqge / Alternance</code><br>外包合約 <code>Mission</code><br>獵人頭/仲介合約 <code>Intérime</code></p>
+<p>確定錄用合約 <code>promesse d’embauche</code><br>離職預先通知 <code>préavis</code></p>
+<p>公會 <code>Syndicat</code></p>
+<p>你在這裡工作嗎？ <code>Vous travail ici?</code><br>能請你說慢一點嗎？ <code>pourriez-vous~lentement~ sil vous plait</code><br>你在這工作多久了？ <code>combien de temps vous travail ici</code></p>
+<h4 id="地理"><a href="#地理" class="headerlink" title="地理"></a>地理</h4><p>法國行政區整併 Avant/Après 圖<br><a href="http://tempsreel.nouvelobs.com/nouvelles-regions/20160629.OBS3620/avant-apres-decouvrez-les-13-noms-des-nouvelles-regions-de-france.html" target="_blank" rel="external">Faites glisser le “slider” de gauche à droite pour voir l’évolution de la carte de France</a></p>
+<p>國家 <code>Etat</code><br>大區 <code>Région</code><br>省分 <code>Département</code><br>省區 <code>Arrondisement</code> 例如, 巴黎有二十多區<br>縣 <code>Canton</code></p>
+<h4 id="語助詞-expletif"><a href="#語助詞-expletif" class="headerlink" title="語助詞 explétif"></a>語助詞 explétif</h4><p>婊子 <code>putain</code><br>白痴 <code>con</code><br>他母親的 <code>enculer</code></p>
+<h4 id="俚語"><a href="#俚語" class="headerlink" title="俚語"></a>俚語</h4><p>你不是糖做的 <code>T&#39;es pas en sucre</code>  你沒有這麼弱不禁風</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;法文筆記 -&lt;/p&gt;
+&lt;h4 id=&quot;生活&quot;&gt;&lt;a href=&quot;#生活&quot; class=&quot;headerlink&quot; title=&quot;生活&quot;&gt;&lt;/a&gt;生活&lt;/h4&gt;&lt;p&gt;螞蟻 &lt;code&gt;la fourmi&lt;/code&gt;&lt;br&gt;我的手麻 &lt;code&gt;J&amp;#39;ai des fourmis dans les bras.&lt;/code&gt;&lt;br&gt;我的腿麻 &lt;code&gt;J&amp;#39;ai des fourmis dans les jambes.&lt;/code&gt;&lt;br&gt;袋子 &lt;code&gt;un sac&lt;/code&gt;&lt;br&gt;口袋 &lt;code&gt;une poche&lt;/code&gt;&lt;br&gt;工作 &lt;code&gt;travail&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不好意思我只懂一點點法文 &lt;code&gt;Désolée, Je comprends un peu de francais&lt;/code&gt;&lt;br&gt;我的法文不好 &lt;code&gt;Mon francais ne pa bien&lt;/code&gt;&lt;br&gt;禮貌性遲到15分鐘 &lt;code&gt;1/4 d’heure de politesse&lt;/code&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Pattern match with tilde equal in swift 3</title>
+    <link href="http://yoursite.com/2017/01/10/swift3-pattern-with-tilde-equal/"/>
+    <id>http://yoursite.com/2017/01/10/swift3-pattern-with-tilde-equal/</id>
+    <published>2017-01-10T11:40:21.000Z</published>
+    <updated>2017-01-11T13:32:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> limit = array.<span class="built_in">count</span></div><div class="line"><span class="keyword">if</span> <span class="number">0</span>...limit ~= limit &#123;</div><div class="line">    <span class="comment">// to do something</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="gt-Wildcard-Pattern"><a href="#gt-Wildcard-Pattern" class="headerlink" title="&gt; Wildcard Pattern"></a>&gt; Wildcard Pattern</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> <span class="number">_</span> <span class="keyword">in</span> <span class="number">1</span>...<span class="number">3</span> &#123;</div><div class="line">    <span class="comment">// Do something three times.</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="gt-Identifier-Pattern"><a href="#gt-Identifier-Pattern" class="headerlink" title="&gt; Identifier Pattern"></a>&gt; Identifier Pattern</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> someValue = <span class="number">42</span></div></pre></td></tr></table></figure>
+<h3 id="gt-Value-Binding-Pattern"><a href="#gt-Value-Binding-Pattern" class="headerlink" title="&gt; Value-Binding Pattern"></a>&gt; Value-Binding Pattern</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> point = (<span class="number">3</span>, <span class="number">2</span>)</div><div class="line"><span class="keyword">switch</span> point &#123;</div><div class="line"><span class="comment">// Bind x and y to the elements of point.</span></div><div class="line"><span class="keyword">case</span> <span class="keyword">let</span> (x, y):</div><div class="line">    <span class="built_in">print</span>(<span class="string">"The point is at (<span class="subst">\(x)</span>, <span class="subst">\(y)</span>)."</span>)</div><div class="line">&#125;</div><div class="line"><span class="comment">// Prints "The point is at (3, 2)."</span></div></pre></td></tr></table></figure>
+<h3 id="gt-Tuple-Pattern"><a href="#gt-Tuple-Pattern" class="headerlink" title="&gt; Tuple Pattern"></a>&gt; Tuple Pattern</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> points = [(<span class="number">0</span>, <span class="number">0</span>), (<span class="number">1</span>, <span class="number">0</span>), (<span class="number">1</span>, <span class="number">1</span>), (<span class="number">2</span>, <span class="number">0</span>), (<span class="number">2</span>, <span class="number">1</span>)]</div><div class="line"><span class="comment">// This code isn't valid.</span></div><div class="line"><span class="keyword">for</span> (x, <span class="number">0</span>) <span class="keyword">in</span> points &#123;</div><div class="line">    <span class="comment">/* ... */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>INCREDIBLE!!!😍</p>
+<h3 id="gt-Optional-Pattern"><a href="#gt-Optional-Pattern" class="headerlink" title="&gt; Optional Pattern"></a>&gt; Optional Pattern</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> someOptional: <span class="type">Int</span>? = <span class="number">42</span></div><div class="line"><span class="comment">// Match using an enumeration case pattern.</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">case</span> .some(<span class="keyword">let</span> x) = someOptional &#123;</div><div class="line">    <span class="built_in">print</span>(x)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Match using an optional pattern.</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">case</span> <span class="keyword">let</span> x? = someOptional &#123;</div><div class="line">    <span class="built_in">print</span>(x)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The optional pattern provides a convenient way to iterate over an array of optional values in a for-in statement, executing the body of the loop only for non-nil elements.<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">et arrayOfOptionalInts: [<span class="type">Int</span>?] = [<span class="literal">nil</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="literal">nil</span>, <span class="number">5</span>]</div><div class="line"><span class="comment">// Match only non-nil values.</span></div><div class="line"><span class="keyword">for</span> <span class="keyword">case</span> <span class="keyword">let</span> number? <span class="keyword">in</span> arrayOfOptionalInts &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"Found a <span class="subst">\(number)</span>"</span>)</div><div class="line">&#125;</div><div class="line"><span class="comment">// Found a 2</span></div><div class="line"><span class="comment">// Found a 3</span></div><div class="line"><span class="comment">// Found a 5</span></div></pre></td></tr></table></figure></p>
+<h3 id="gt-Expression-Pattern"><a href="#gt-Expression-Pattern" class="headerlink" title="&gt; Expression Pattern"></a>&gt; Expression Pattern</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> point = (<span class="number">1</span>, <span class="number">2</span>)</div><div class="line"><span class="keyword">switch</span> point &#123;</div><div class="line"><span class="keyword">case</span> (<span class="number">0</span>, <span class="number">0</span>):</div><div class="line">    <span class="built_in">print</span>(<span class="string">"(0, 0) is at the origin."</span>)</div><div class="line"><span class="keyword">case</span> (-<span class="number">2</span>...<span class="number">2</span>, -<span class="number">2</span>...<span class="number">2</span>):</div><div class="line">    <span class="built_in">print</span>(<span class="string">"(<span class="subst">\(point.<span class="number">0</span>)</span>, <span class="subst">\(point.<span class="number">1</span>)</span>) is near the origin."</span>)</div><div class="line"><span class="keyword">default</span>:</div><div class="line">    <span class="built_in">print</span>(<span class="string">"The point is at (<span class="subst">\(point.<span class="number">0</span>)</span>, <span class="subst">\(point.<span class="number">1</span>)</span>)."</span>)</div><div class="line">&#125;</div><div class="line"><span class="comment">// Prints "(1, 2) is near the origin."</span></div></pre></td></tr></table></figure>
+<p>can improve by overload the tilde operator <code>~=</code>.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Overload the ~= operator to match a string with an integer.</span></div><div class="line"><span class="function"><span class="keyword">func</span> ~=<span class="params">(pattern: String, value: Int)</span></span> -&gt; <span class="type">Bool</span> &#123;</div><div class="line">    <span class="keyword">return</span> pattern == <span class="string">"<span class="subst">\(value)</span>"</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">switch</span> point &#123;</div><div class="line"><span class="keyword">case</span> (<span class="string">"0"</span>, <span class="string">"0"</span>):</div><div class="line">    <span class="built_in">print</span>(<span class="string">"(0, 0) is at the origin."</span>)</div><div class="line"><span class="keyword">default</span>:</div><div class="line">    <span class="built_in">print</span>(<span class="string">"The point is at (<span class="subst">\(point.<span class="number">0</span>)</span>, <span class="subst">\(point.<span class="number">1</span>)</span>)."</span>)</div><div class="line">&#125;</div><div class="line"><span class="comment">// Prints "The point is at (1, 2)."</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; limit = array.&lt;span class=&quot;built_in&quot;&gt;count&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;...limit ~= limit &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// to do something&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Variadic Parameters in swift 3</title>
+    <link href="http://yoursite.com/2017/01/10/swift3-variadic-parameters/"/>
+    <id>http://yoursite.com/2017/01/10/swift3-variadic-parameters/</id>
+    <published>2017-01-10T11:40:21.000Z</published>
+    <updated>2017-01-10T11:42:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>Wanna a function takes input values close to infinity?</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> total: <span class="type">Double</span> = <span class="number">0</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">findTheMean</span><span class="params">(numbers: Double...)</span></span> -&gt; <span class="type">Double</span> &#123;</div><div class="line">  <span class="keyword">for</span> number <span class="keyword">in</span> numbers &#123; total += number &#125;</div><div class="line">  <span class="keyword">return</span> total / <span class="type">Double</span>(numbers.<span class="built_in">count</span>)</div><div class="line">&#125;</div><div class="line">findTheMean(numbers: <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>) <span class="comment">// 5.4</span></div></pre></td></tr></table></figure>
+<p>AWESOME!!! 😍</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;p&gt;Wanna a function takes inp
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Convenient Initializer in swift 3</title>
+    <link href="http://yoursite.com/2017/01/10/swift3-convenient-initializers/"/>
+    <id>http://yoursite.com/2017/01/10/swift3-convenient-initializers/</id>
+    <published>2017-01-10T11:20:20.000Z</published>
+    <updated>2017-01-10T11:25:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Original Way</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Human</span> </span>&#123;</div><div class="line">  <span class="keyword">var</span> finger: <span class="type">Int</span></div><div class="line">  <span class="keyword">var</span> toe: <span class="type">Int</span></div><div class="line"></div><div class="line">  <span class="keyword">init</span>(finger: <span class="type">Int</span>, toe: <span class="type">Int</span>) &#123;</div><div class="line">    <span class="keyword">self</span>.finger = finger</div><div class="line">    <span class="keyword">self</span>.toe = toe</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> bob = <span class="type">Human</span>(finger: <span class="number">10</span>, toe: <span class="number">10</span>)</div><div class="line">bob.finger <span class="comment">// 10</span></div><div class="line">bob.toe <span class="comment">// 10</span></div></pre></td></tr></table></figure>
+<p>but in the general case, we all have 10 finger and toe.<br>here is a <code>convenient</code> version.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Cooler Way</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Human</span> </span>&#123;</div><div class="line">  <span class="keyword">var</span> finger: <span class="type">Int</span></div><div class="line">  <span class="keyword">var</span> toe: <span class="type">Int</span></div><div class="line">  <span class="keyword">init</span>(finger: <span class="type">Int</span>, toe: <span class="type">Int</span>) &#123;</div><div class="line">    <span class="keyword">self</span>.finger = finger</div><div class="line">    <span class="keyword">self</span>.toe = toe</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">convenience</span> <span class="keyword">init</span>() &#123;</div><div class="line">    <span class="keyword">self</span>.<span class="keyword">init</span>(finger: <span class="number">10</span>, toe: <span class="number">10</span>)</div><div class="line">    <span class="comment">// referring to the top init block</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> bob = <span class="type">Human</span>()</div><div class="line">bob.finger <span class="comment">// 10</span></div><div class="line">bob.toe <span class="comment">// 10</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;figure class=&quot;highlight swif
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VueJS tips</title>
+    <link href="http://yoursite.com/2017/01/07/vuejs-tips/"/>
+    <id>http://yoursite.com/2017/01/07/vuejs-tips/</id>
+    <published>2017-01-06T22:01:09.000Z</published>
+    <updated>2017-01-06T23:25:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p><img src="/2017/01/07/vuejs-tips/vuejs.jpg" alt="VueJS"></p>
+<a id="more"></a>
+<h3 id="gt-Event-listener-shortcut"><a href="#gt-Event-listener-shortcut" class="headerlink" title="&gt; Event listener shortcut"></a>&gt; Event listener shortcut</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"modifyName"</span>&gt;</span>Modify<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>equals<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"modifyName"</span>&gt;</span>Modify<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="gt-Attribute-binding-shortcut"><a href="#gt-Attribute-binding-shortcut" class="headerlink" title="&gt; Attribute binding shortcut"></a>&gt; Attribute binding shortcut</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-bind:class</span>=<span class="string">"cssClass"</span>&gt;</span>Class: &#123;&#123; cssClass &#125;&#125;<span class="tag">&lt;/<span class="name">input</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>equals<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">:class</span>=<span class="string">"cssClass"</span>&gt;</span>Class: &#123;&#123; cssClass &#125;&#125;<span class="tag">&lt;/<span class="name">input</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/2017/01/07/vuejs-tips/vuejs.jpg&quot; alt=&quot;VueJS&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Personal portfolios collections</title>
+    <link href="http://yoursite.com/2017/01/06/portfolios/"/>
+    <id>http://yoursite.com/2017/01/06/portfolios/</id>
+    <published>2017-01-05T17:15:57.000Z</published>
+    <updated>2017-01-15T18:00:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><h3 id="iOS-App-Develop-amp-Design"><a href="#iOS-App-Develop-amp-Design" class="headerlink" title="iOS App Develop &amp; Design"></a>iOS App Develop &amp; Design</h3><p><a href="https://appsto.re/tw/Zcqchb.i" target="_blank" rel="external"><img src="/2017/01/06/portfolios/luv_calc.png" alt="luv_calc"></a></p>
+<p style="text-align: center;"><br><a href="https://appsto.re/tw/Zcqchb.i" target="_blank" rel="external">https://appsto.re/tw/Zcqchb.i</a><br>KEYWORD: <code>luv</code> <code>calc</code><br></p>
+
+<a id="more"></a>
+<h3 id="SketchUp-3D-modeling"><a href="#SketchUp-3D-modeling" class="headerlink" title="SketchUp 3D modeling"></a>SketchUp 3D modeling</h3><p><img src="sketchUp-washer-self.jpg" alt="sketchUp-washer-self"><br><img src="院子規劃-方案5-出圖用.jpg" alt="院子規劃-方案5-出圖用"></p>
+<div class="tip">this is my home at Taiwan</div>
+
+<!-- HIDE
+
+### Poster Design
+![美肌方程式](美肌方程式.jpg)
+![SAM](SAM-0515-minified.jpg)
+![NP0702](NP0702-88x75cm-FB-minified.jpg)
+![NP0515-FB](NP0515-FB.jpg)
+![NP0515-honor](NP0515-honor.jpg)
+![poster-japan](poster-japan.jpg)
+![poster-cashflow](poster-cashflow.jpg)
+![17-2x-normal-resampling](17-2x-normal-resampling.jpg)
+![poster-jason](poster-jason.jpg)
+
+### DM Design (N-Fold)
+![DM-N-folding-F](DM-N-folding-F.jpg)
+![DM-N-folding-B](DM-N-folding-B.jpg)
+
+### Business card Design
+![bc-jason](bc-jason.jpg)
+
+### Video editing
+Watch this video with password here [ `howdy` ]
+
+__**2012 NP Team Review**__
+<iframe src="https://player.vimeo.com/video/198219231" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/198219231">G室回顧影片</a> from <a href="https://vimeo.com/user4919768">Nil.Liu</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+-->
+<h3 id="jQuery-WordPress-wafermap-plug-ins-for-semiconductor-industry"><a href="#jQuery-WordPress-wafermap-plug-ins-for-semiconductor-industry" class="headerlink" title="jQuery WordPress wafermap plug-ins for semiconductor industry."></a><code>jQuery</code> WordPress wafermap plug-ins for semiconductor industry.</h3><p><img src="wafermap.png" alt="jQuery WaferMap"></p>
+<div class="tip">implement by jCanvas(SVG) + JSON</div>
+
+<h3 id="DaoBook-system-How-to-make-ur-own-mobile-website-in-10-mins-with-DaoBook-v0-1"><a href="#DaoBook-system-How-to-make-ur-own-mobile-website-in-10-mins-with-DaoBook-v0-1" class="headerlink" title="DaoBook system(How to make ur own mobile website in 10 mins with DaoBook v0.1)"></a>DaoBook system<em>(How to make ur own mobile website in 10 mins with DaoBook v0.1)</em></h3><p>Watch this video with password here &lt;<code>daoapp</code>&gt;</p>
+<p><iframe src="https://player.vimeo.com/video/105120139" width="640" height="485" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></p>
+<p><a href="https://vimeo.com/105120139" target="_blank" rel="external">How to make ur own mobile website in 10 mins with DaoBook v0.1</a> from <a href="https://vimeo.com/user4919768" target="_blank" rel="external">Nil.Liu</a> on <a href="https://vimeo.com" target="_blank" rel="external">Vimeo</a>.</p>
+
+<h3 id="IMT-model-agent-company-WordPress-website"><a href="#IMT-model-agent-company-WordPress-website" class="headerlink" title="IMT model agent company WordPress website"></a>IMT model agent company WordPress website</h3><p><img src="IMT.png" alt="IMT agency website"></p>
+<h3 id="just-another-bagel-website"><a href="#just-another-bagel-website" class="headerlink" title="just another bagel website"></a>just another bagel website</h3><p><img src="bagel.png" alt="bagel"></p>
+<h3 id="SNMP-system-monitor-tool"><a href="#SNMP-system-monitor-tool" class="headerlink" title="SNMP system monitor tool"></a>SNMP system monitor tool</h3><p><img src="snmp1.png" alt="SNMP"><br><img src="snmp2.png" alt="SNMP"></p>
+<h3 id="online-examination-management-system"><a href="#online-examination-management-system" class="headerlink" title="online examination management system"></a>online examination management system</h3><p><img src="exam1.png" alt="online exam system"><br><img src="exam3.png" alt="online exam system"><br><img src="exam4.png" alt="online exam system"><br><img src="exam5.png" alt="online exam system"><br><img src="exam7.png" alt="online exam system"></p>
+<div class="tip">it’was a long time ago project, the era jQuery &amp; SEO not quite popular as now</div>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;iOS-App-Develop-amp-Design&quot;&gt;&lt;a href=&quot;#iOS-App-Develop-amp-Design&quot; class=&quot;headerlink&quot; title=&quot;iOS App Develop &amp;amp; Design&quot;&gt;&lt;/a&gt;iOS App Develop &amp;amp; Design&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://appsto.re/tw/Zcqchb.i&quot;&gt;&lt;img src=&quot;/2017/01/06/portfolios/luv_calc.png&quot; alt=&quot;luv_calc&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://appsto.re/tw/Zcqchb.i&quot;&gt;https://appsto.re/tw/Zcqchb.i&lt;/a&gt;&lt;br&gt;KEYWORD: &lt;code&gt;luv&lt;/code&gt; &lt;code&gt;calc&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux commands collections</title>
+    <link href="http://yoursite.com/2017/01/05/linux-commands-collections/"/>
+    <id>http://yoursite.com/2017/01/05/linux-commands-collections/</id>
+    <published>2017-01-05T01:15:06.000Z</published>
+    <updated>2017-01-05T01:19:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>following was some useful linux commands, FYI.</p>
+<a id="more"></a>
+<h3 id="gt-Check-which-process-listening-on-specified-port"><a href="#gt-Check-which-process-listening-on-specified-port" class="headerlink" title="&gt; Check which process listening on specified port."></a>&gt; Check which process listening on specified port.</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo lsof -i :80</div></pre></td></tr></table></figure>
+<p><img src="lsof.png" alt="lsof"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;following was some useful linux commands, FYI.&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Setup your own Parse server</title>
+    <link href="http://yoursite.com/2017/01/05/setup-your-own-parse-server/"/>
+    <id>http://yoursite.com/2017/01/05/setup-your-own-parse-server/</id>
+    <published>2017-01-04T23:09:37.000Z</published>
+    <updated>2017-04-06T03:13:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><h3 id="gt-Env-setup"><a href="#gt-Env-setup" class="headerlink" title="&gt; Env. setup"></a>&gt; Env. setup</h3><p>For OS X,<br>we will need following packages as basic requirements:</p>
+<ul>
+<li>Homebrew</li>
+<li>Node.js</li>
+<li>Git</li>
+<li>GitHub</li>
+<li>ATOM or any IDE editor</li>
+</ul>
+<a id="more"></a>
+<h3 id="gt-Mongodb-installation"><a href="#gt-Mongodb-installation" class="headerlink" title="&gt; Mongodb installation"></a>&gt; Mongodb installation</h3><p>And we install a instance of Mongodb server on our own server,<br>here I choose to install on my own DigitalOcean server.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get update</div><div class="line">$ sudo apt-get install mongodb</div></pre></td></tr></table></figure>
+<p>then, we will need to create our own <code>mongod.service</code> file,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[Unit]</div><div class="line">Description=High-performance, schema-free document-oriented database</div><div class="line">After=network.target</div><div class="line"></div><div class="line">[Service]</div><div class="line">User=mongodb</div><div class="line">ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf</div><div class="line"></div><div class="line">[Install]</div><div class="line">WantedBy=multi-user.target</div></pre></td></tr></table></figure></p>
+<p>then, we can start mongodb now.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo service mongod start</div></pre></td></tr></table></figure></p>
+<h3 id="gt-install-Let-39-s-Encrypt-and-retrieve-a-certificate"><a href="#gt-install-Let-39-s-Encrypt-and-retrieve-a-certificate" class="headerlink" title="&gt; install Let&#39;s Encrypt and retrieve a certificate"></a>&gt; install <code>Let&#39;s Encrypt</code> and retrieve a certificate</h3><p>Let’s Encrypt is a new Certificate Authority<br>that provides an easy way to obtain free TLS/SSL certificates.</p>
+<p><div class="tip">YOU WILL NEED an A Record on DNS server to point to your server</div><br>then we will need the <code>bc</code> package installed.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install bc</div></pre></td></tr></table></figure></p>
+<p>and we clone <code>letsencrypt</code> repository from GitHub<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo git <span class="built_in">clone</span> https://github.com/letsencrypt/letsencrypt /opt/letsencrypt</div></pre></td></tr></table></figure></p>
+<p>retrieve initial certificate<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /opt/letsencrypt &amp;&amp; ./letsencrypt-auto certonly --standalone</div></pre></td></tr></table></figure></p>
+<p><img src="letsencrypt_01.png" alt="letsencrypt_01"><br><img src="letsencrypt_02.png" alt="letsencrypt_02"><br><img src="letsencrypt_03.png" alt="letsencrypt_03"></p>
+<p>however, if you pretty sure your DNS setup was correct,<br>but you see following error, you should go take a nap and come back later.<br><code>DNS problem: query timed out looking up CAA for xxx.com</code></p>
+<p>anyway, I get the certificate after couple tries, 🤣<br><img src="letsencrypt_04.png" alt="letsencrypt_04"><br><img src="letsencrypt_05.png" alt="letsencrypt_05"></p>
+<p>and since it will expired in 90 days,<br>we should setup auto renew by following commands.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/sbin</div><div class="line">$ sudo wget https://dl.eff.org/certbot-auto</div><div class="line">$ chmod a+x certbot-auto</div></pre></td></tr></table></figure></p>
+<p>then we run once to do setup and confirmation.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /usr/<span class="built_in">local</span>/sbin/certbot-auto</div></pre></td></tr></table></figure></p>
+<p><img src="letsencrypt_06.png" alt="letsencrypt_05"></p>
+<h3 id="gt-get-clone-of-parse-server-application"><a href="#gt-get-clone-of-parse-server-application" class="headerlink" title="&gt; get clone of parse-server application"></a>&gt; get clone of <code>parse-server</code> application</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/ParsePlatform/parse-server-example.git</div><div class="line">$ mv parse-server-example/ parse-server/</div><div class="line">$ <span class="built_in">cd</span> parse-server/</div><div class="line">$ npm i</div></pre></td></tr></table></figure>
+<h3 id="gt-modify-setting-in-index-js"><a href="#gt-modify-setting-in-index-js" class="headerlink" title="&gt; modify setting in index.js"></a>&gt; modify setting in <code>index.js</code></h3><p><em>TIPS:</em> you can use <code>md5sum</code>(ubuntu) or <code>md5</code>(osx) command to generate <code>appId</code> and <code>masterKey</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> api = <span class="keyword">new</span> ParseServer(&#123;</div><div class="line">  databaseURI: <span class="string">'mongodb://localhost:27017/dev'</span>,</div><div class="line">  cloud: __dirname + <span class="string">'/cloud/main.js'</span>, <span class="comment">// Absolute path to your Cloud Code</span></div><div class="line">  appId: <span class="string">'myAppId'</span>,</div><div class="line">  masterKey: <span class="string">'myMasterKey'</span>, <span class="comment">// Keep this key secret!</span></div><div class="line">  fileKey: <span class="string">'optionalFileKey'</span>,</div><div class="line">  serverURL: <span class="string">'http://localhost:1337/parse'</span> <span class="comment">// Don't forget to change to https if needed</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="gt-troubleshooting-warn-Unable-to-ensure-uniqueness-for-usernames…"><a href="#gt-troubleshooting-warn-Unable-to-ensure-uniqueness-for-usernames…" class="headerlink" title="&gt; troubleshooting warn: Unable to ensure uniqueness for usernames…"></a>&gt; troubleshooting <em>warn: Unable to ensure uniqueness for usernames…</em></h3><p>if you got this<br>&gt;</p>
+<blockquote>
+<p>warn: Unable to ensure uniqueness for usernames:  MongoError: auth failed</p>
+</blockquote>
+<p>make sure you have no any special characters inside your password</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;gt-Env-setup&quot;&gt;&lt;a href=&quot;#gt-Env-setup&quot; class=&quot;headerlink&quot; title=&quot;&amp;gt; Env. setup&quot;&gt;&lt;/a&gt;&amp;gt; Env. setup&lt;/h3&gt;&lt;p&gt;For OS X,&lt;br&gt;we will need following packages as basic requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Homebrew&lt;/li&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;li&gt;GitHub&lt;/li&gt;
+&lt;li&gt;ATOM or any IDE editor&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

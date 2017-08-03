@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/2017/01/15/french-note/</loc>
+    
+    <lastmod>2017-08-03T08:31:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/07/18/js-array-unique/</loc>
+    
+    <lastmod>2017-07-17T21:55:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/07/09/algorithms-fibonacci/</loc>
+    
+    <lastmod>2017-07-08T16:54:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/04/20/check-ssh-password/</loc>
+    
+    <lastmod>2017-04-19T23:57:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/01/05/setup-your-own-parse-server/</loc>
+    
+    <lastmod>2017-04-06T03:13:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/03/21/gitlab-clone-permission-denied/</loc>
+    
+    <lastmod>2017-04-03T07:21:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/03/22/nodejs-pipe/</loc>
+    
+    <lastmod>2017-03-22T04:30:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/03/04/mongodb-import-json/</loc>
+    
+    <lastmod>2017-03-20T23:55:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/02/28/js-sort-on/</loc>
+    
+    <lastmod>2017-02-27T23:27:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/02/19/closures-of-javascript/</loc>
+    
+    <lastmod>2017-02-18T16:38:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/02/04/value-of-eval-time-complexity/</loc>
+    
+    <lastmod>2017-02-04T09:11:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/27/HackerRank-Amazon-SocialNetworkCourses/</loc>
+    
+    <lastmod>2017-01-30T11:26:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/01/25/js-functional-programming/</loc>
+    
+    <lastmod>2017-01-25T03:44:51.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/01/25/jsFiddle-console-log/</loc>
+    
+    <lastmod>2017-01-25T03:06:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/01/24/mongodb-auth/</loc>
+    
+    <lastmod>2017-01-24T03:21:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/01/22/python-utf8/</loc>
+    
+    <lastmod>2017-01-22T02:58:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/01/06/portfolios/</loc>
+    
+    <lastmod>2017-01-15T18:00:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/01/10/swift3-pattern-with-tilde-equal/</loc>
+    
+    <lastmod>2017-01-11T13:32:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/01/10/swift3-variadic-parameters/</loc>
+    
+    <lastmod>2017-01-10T11:42:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/01/10/swift3-convenient-initializers/</loc>
+    
+    <lastmod>2017-01-10T11:25:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/01/07/vuejs-tips/</loc>
+    
+    <lastmod>2017-01-06T23:25:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/01/05/linux-commands-collections/</loc>
+    
+    <lastmod>2017-01-05T01:19:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/12/23/swift3-create-project-with-cocoapods/</loc>
+    
+    <lastmod>2017-01-04T14:31:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/12/23/customize-atom-package-insert-timestamp/</loc>
+    
+    <lastmod>2016-12-23T15:33:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/22/oracle-not-clean-shutdown-recovery/</loc>
+    
+    <lastmod>2016-12-23T11:56:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/16/swift3-array-extension/</loc>
+    
+    <lastmod>2016-09-10T20:41:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/16/install-caskroom-on-osx/</loc>
+    
+    <lastmod>2016-08-19T13:20:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/18/design-flow/</loc>
+    
+    <lastmod>2016-08-18T16:02:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/16/swift3-mark-comment/</loc>
+    
+    <lastmod>2016-08-16T16:56:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/16/swift3-getter-n-setter/</loc>
+    
+    <lastmod>2016-08-16T11:16:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/15/swift3-loop/</loc>
+    
+    <lastmod>2016-08-16T10:34:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/15/humour-ad-collect/</loc>
+    
+    <lastmod>2016-08-15T16:43:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/09/HackerRank-SimpleArraySum/</loc>
+    
+    <lastmod>2016-08-14T18:10:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/09/HackerRank-SolveMeFirst/</loc>
+    
+    <lastmod>2016-08-14T18:08:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/14/lazy-instantiation/</loc>
+    
+    <lastmod>2016-08-14T08:35:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/14/12-extremely-useful-hacks-for-javascript/</loc>
+    
+    <lastmod>2016-08-14T07:55:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/14/swift3-swift-optionals/</loc>
+    
+    <lastmod>2016-08-14T06:33:54.000Z</lastmod>
+    
+  </url>
+  
+</urlset>

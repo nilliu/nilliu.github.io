@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> nodejs pipe interface · nilliu</title><meta name="description" content="nodejs pipe interface - Nil"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon-old.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="nilliu"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/2017/01/06/portfolios/" target="_self" class="nav-list-link">PORTFOLIO</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/nilliu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">nodejs pipe interface</h1><div class="post-info">Mar 22, 2017</div><div class="post-content"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><h6 id="Pipe-Interface-sample"><a href="#Pipe-Interface-sample" class="headerlink" title="Pipe Interface sample"></a>Pipe Interface sample</h6><p>this is really cool about the <code>Pipe Interface</code><br>you can just chain them together to get your job done.😍</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> r = fs.createReadStream(<span class="string">'file.txt'</span>)</div><div class="line"><span class="keyword">var</span> z = zlib.createGzip()</div><div class="line"><span class="keyword">var</span> w = fs.createWriteStream(<span class="string">'file.txt.gz'</span>)</div><div class="line">r.pipe(z).pipe(w)</div></pre></td></tr></table></figure>
+</div></article></div></section><footer><div class="paginator"><a href="/2017/04/20/check-ssh-password/" class="prev">PREV</a><a href="/2017/03/21/gitlab-clone-permission-denied/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'nilliu';
+var disqus_identifier = '2017/03/22/nodejs-pipe/';
+var disqus_title = 'nodejs pipe interface';
+var disqus_url = 'http://yoursite.com/2017/03/22/nodejs-pipe/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//nilliu.disqus.com/count.js" async></script><div class="copyright"><p>© 2016 - 2017 <a href="http://yoursite.com">Nil</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><!--script(async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML")--></body></html><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97730441-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
