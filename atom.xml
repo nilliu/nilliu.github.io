@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-03T12:50:16.000Z</updated>
+  <updated>2017-08-18T14:55:58.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ubuntu package update</title>
+    <link href="http://yoursite.com/2017/08/06/ubuntu-package-update/"/>
+    <id>http://yoursite.com/2017/08/06/ubuntu-package-update/</id>
+    <published>2017-08-06T13:50:19.000Z</published>
+    <updated>2017-08-18T14:55:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>sometimes we will see following messages after login via ssh.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">88 packages can be updated.</div><div class="line">80 updates are security updates</div></pre></td></tr></table></figure></p>
+<p>you can go though following commands to do update.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">root@n2:~<span class="comment"># apt-get update         </span></div><div class="line">root@n2:~<span class="comment"># apt-get upgrade</span></div><div class="line">root@n2:~<span class="comment"># apt-get autoremove</span></div><div class="line">root@n2:~<span class="comment"># apt-get dist-upgrade</span></div></pre></td></tr></table></figure></p>
+<p>if you get key expired message like this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">W: GPG error: http://nginx.org trusty </div><div class="line">InRelease: The following signatures were invalid: KEYEXPIRED 1471427554</div></pre></td></tr></table></figure></p>
+<p>1st, find the expired keys and id<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">root@n2:~<span class="comment"># apt-key list | grep "expired:"</span></div><div class="line">pub   2048R/7BD9BF62 2011-08-19 [expired: 2016-08-17]</div></pre></td></tr></table></figure></p>
+<p>you can using following command to update the expired key<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">root@n2:~<span class="comment"># apt-key adv --recv-keys --keyserver keys.gnupg.net "7BD9BF62"</span></div></pre></td></tr></table></figure></p>
+<p>but if you got an timed out issue like this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gpg: requesting key 7BD9BF62 from hkp server keys.gnupg.net</div><div class="line">gpg: keyserver timed out</div><div class="line">gpg: keyserver receive failed: keyserver error</div></pre></td></tr></table></figure></p>
+<p>that’s means it got blocked by firewall,<br>try to force using port 80<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">root@n2:~<span class="comment"># apt-key adv --recv-keys --keyserver hkp://keys.gnupg.net:80 "7BD9BF62"</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;p&gt;sometimes we will see foll
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>CSS 3 box sizing</title>
@@ -373,6 +398,27 @@
   </entry>
   
   <entry>
+    <title>Variadic Parameters in swift 3</title>
+    <link href="http://yoursite.com/2017/01/10/swift3-variadic-parameters/"/>
+    <id>http://yoursite.com/2017/01/10/swift3-variadic-parameters/</id>
+    <published>2017-01-10T11:40:21.000Z</published>
+    <updated>2017-01-10T11:42:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>Wanna a function takes input values close to infinity?</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> total: <span class="type">Double</span> = <span class="number">0</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">findTheMean</span><span class="params">(numbers: Double...)</span></span> -&gt; <span class="type">Double</span> &#123;</div><div class="line">  <span class="keyword">for</span> number <span class="keyword">in</span> numbers &#123; total += number &#125;</div><div class="line">  <span class="keyword">return</span> total / <span class="type">Double</span>(numbers.<span class="built_in">count</span>)</div><div class="line">&#125;</div><div class="line">findTheMean(numbers: <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>) <span class="comment">// 5.4</span></div></pre></td></tr></table></figure>
+<p>AWESOME!!! 😍</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;p&gt;Wanna a function takes inp
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Pattern match with tilde equal in swift 3</title>
     <link href="http://yoursite.com/2017/01/10/swift3-pattern-with-tilde-equal/"/>
     <id>http://yoursite.com/2017/01/10/swift3-pattern-with-tilde-equal/</id>
@@ -396,27 +442,6 @@
     <summary type="html">
     
       &lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; limit = array.&lt;span class=&quot;built_in&quot;&gt;count&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;...limit ~= limit &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// to do something&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Variadic Parameters in swift 3</title>
-    <link href="http://yoursite.com/2017/01/10/swift3-variadic-parameters/"/>
-    <id>http://yoursite.com/2017/01/10/swift3-variadic-parameters/</id>
-    <published>2017-01-10T11:40:21.000Z</published>
-    <updated>2017-01-10T11:42:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>Wanna a function takes input values close to infinity?</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> total: <span class="type">Double</span> = <span class="number">0</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">findTheMean</span><span class="params">(numbers: Double...)</span></span> -&gt; <span class="type">Double</span> &#123;</div><div class="line">  <span class="keyword">for</span> number <span class="keyword">in</span> numbers &#123; total += number &#125;</div><div class="line">  <span class="keyword">return</span> total / <span class="type">Double</span>(numbers.<span class="built_in">count</span>)</div><div class="line">&#125;</div><div class="line">findTheMean(numbers: <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>) <span class="comment">// 5.4</span></div></pre></td></tr></table></figure>
-<p>AWESOME!!! 😍</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&quot;&gt;&lt;p&gt;Wanna a function takes inp
     
     </summary>
     
@@ -530,28 +555,6 @@ __**2012 NP Team Review**__
 &lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://appsto.re/tw/Zcqchb.i&quot;&gt;https://appsto.re/tw/Zcqchb.i&lt;/a&gt;&lt;br&gt;KEYWORD: &lt;code&gt;luv&lt;/code&gt; &lt;code&gt;calc&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;p&gt;[&lt;img src=&quot;/2017/01/06/portfolios/clock_demo.gif&quot; alt=&quot;clock_demo&quot;&gt;]&lt;br&gt;a fancy iOS swift 3 clock component.&lt;br&gt;background transparent, works in &amp;amp; with multi-storyboard.&lt;br&gt;supported auto-layout.&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Linux commands collections</title>
-    <link href="http://yoursite.com/2017/01/05/linux-commands-collections/"/>
-    <id>http://yoursite.com/2017/01/05/linux-commands-collections/</id>
-    <published>2017-01-05T01:15:06.000Z</published>
-    <updated>2017-01-05T01:19:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>following was some useful linux commands, FYI.</p>
-<a id="more"></a>
-<h3 id="gt-Check-which-process-listening-on-specified-port"><a href="#gt-Check-which-process-listening-on-specified-port" class="headerlink" title="&gt; Check which process listening on specified port."></a>&gt; Check which process listening on specified port.</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo lsof -i :80</div></pre></td></tr></table></figure>
-<p><img src="lsof.png" alt="lsof"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;following was some useful linux commands, FYI.&lt;/p&gt;
     
     </summary>
     
