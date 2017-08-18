@@ -498,43 +498,15 @@
     <link href="http://yoursite.com/2017/01/06/portfolios/"/>
     <id>http://yoursite.com/2017/01/06/portfolios/</id>
     <published>2017-01-05T17:15:57.000Z</published>
-    <updated>2017-08-18T15:03:04.000Z</updated>
+    <updated>2017-08-18T15:04:25.000Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><h3 id="iOS-App-Develop-amp-Design"><a href="#iOS-App-Develop-amp-Design" class="headerlink" title="iOS App Develop &amp; Design"></a>iOS App Develop &amp; Design</h3><p><a href="https://appsto.re/tw/Zcqchb.i" target="_blank" rel="external"><img src="/2017/01/06/portfolios/luv_calc.png" alt="luv_calc"></a></p>
 <p style="text-align: center;"><br><a href="https://appsto.re/tw/Zcqchb.i" target="_blank" rel="external">https://appsto.re/tw/Zcqchb.i</a><br>KEYWORD: <code>luv</code> <code>calc</code><br></p>
 
-<p><img src="/2017/01/06/portfolios/clock-demo.gif" alt="clock_demo"><br>a fancy iOS swift 3 clock component.<br>background transparent, works in &amp; with multi-storyboard.<br>supported auto-layout.<br><a id="more"></a></p>
-<h3 id="SketchUp-3D-modeling"><a href="#SketchUp-3D-modeling" class="headerlink" title="SketchUp 3D modeling"></a>SketchUp 3D modeling</h3><p><img src="sketchUp-washer-self.jpg" alt="sketchUp-washer-self"><br><img src="院子規劃-方案5-出圖用.jpg" alt="院子規劃-方案5-出圖用"></p>
-<div class="tip">this is my home at Taiwan</div>
+<p><img src="/2017/01/06/portfolios/clock-demo.gif" alt="clock_demo"></p>
+<p style="text-align: center;"><br>a fancy iOS swift 3 clock component.<br>background transparent, works in &amp; with multi-storyboard.<br>supported auto-layout.<br></p><br><a id="more"></a><br><br>### SketchUp 3D modeling<br><img src="sketchUp-washer-self.jpg" alt="sketchUp-washer-self"><br><img src="院子規劃-方案5-出圖用.jpg" alt="院子規劃-方案5-出圖用"><br><div class="tip">this is my home at Taiwan</div><br><br>&lt;!– HIDE<br><br>### Poster Design<br><img src="美肌方程式.jpg" alt="美肌方程式"><br><img src="SAM-0515-minified.jpg" alt="SAM"><br><img src="NP0702-88x75cm-FB-minified.jpg" alt="NP0702"><br><img src="NP0515-FB.jpg" alt="NP0515-FB"><br><img src="NP0515-honor.jpg" alt="NP0515-honor"><br><img src="poster-japan.jpg" alt="poster-japan"><br><img src="poster-cashflow.jpg" alt="poster-cashflow"><br><img src="17-2x-normal-resampling.jpg" alt="17-2x-normal-resampling"><br><img src="poster-jason.jpg" alt="poster-jason"><br><br>### DM Design (N-Fold)<br><img src="DM-N-folding-F.jpg" alt="DM-N-folding-F"><br><img src="DM-N-folding-B.jpg" alt="DM-N-folding-B"><br><br>### Business card Design<br><img src="bc-jason.jpg" alt="bc-jason"><br><br>### Video editing<br>Watch this video with password here [ <code>howdy</code> ]<br><br><strong><strong>2012 NP Team Review</strong></strong><br><iframe src="https://player.vimeo.com/video/198219231" width="640" height="480" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe><br><p><a href="https://vimeo.com/198219231" target="_blank" rel="external">G室回顧影片</a> from <a href="https://vimeo.com/user4919768" target="_blank" rel="external">Nil.Liu</a> on <a href="https://vimeo.com" target="_blank" rel="external">Vimeo</a>.</p>
 
-<!-- HIDE
-
-### Poster Design
-![美肌方程式](美肌方程式.jpg)
-![SAM](SAM-0515-minified.jpg)
-![NP0702](NP0702-88x75cm-FB-minified.jpg)
-![NP0515-FB](NP0515-FB.jpg)
-![NP0515-honor](NP0515-honor.jpg)
-![poster-japan](poster-japan.jpg)
-![poster-cashflow](poster-cashflow.jpg)
-![17-2x-normal-resampling](17-2x-normal-resampling.jpg)
-![poster-jason](poster-jason.jpg)
-
-### DM Design (N-Fold)
-![DM-N-folding-F](DM-N-folding-F.jpg)
-![DM-N-folding-B](DM-N-folding-B.jpg)
-
-### Business card Design
-![bc-jason](bc-jason.jpg)
-
-### Video editing
-Watch this video with password here [ `howdy` ]
-
-__**2012 NP Team Review**__
-<iframe src="https://player.vimeo.com/video/198219231" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/198219231">G室回顧影片</a> from <a href="https://vimeo.com/user4919768">Nil.Liu</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
--->
+<p>–&gt;</p>
 <h3 id="jQuery-WordPress-wafermap-plug-ins-for-semiconductor-industry"><a href="#jQuery-WordPress-wafermap-plug-ins-for-semiconductor-industry" class="headerlink" title="jQuery WordPress wafermap plug-ins for semiconductor industry."></a><code>jQuery</code> WordPress wafermap plug-ins for semiconductor industry.</h3><p><img src="wafermap.png" alt="jQuery WaferMap"></p>
 <div class="tip">implement by jCanvas(SVG) + JSON</div>
 
@@ -554,7 +526,8 @@ __**2012 NP Team Review**__
       &lt;h3 id=&quot;iOS-App-Develop-amp-Design&quot;&gt;&lt;a href=&quot;#iOS-App-Develop-amp-Design&quot; class=&quot;headerlink&quot; title=&quot;iOS App Develop &amp;amp; Design&quot;&gt;&lt;/a&gt;iOS App Develop &amp;amp; Design&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://appsto.re/tw/Zcqchb.i&quot;&gt;&lt;img src=&quot;/2017/01/06/portfolios/luv_calc.png&quot; alt=&quot;luv_calc&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://appsto.re/tw/Zcqchb.i&quot;&gt;https://appsto.re/tw/Zcqchb.i&lt;/a&gt;&lt;br&gt;KEYWORD: &lt;code&gt;luv&lt;/code&gt; &lt;code&gt;calc&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/2017/01/06/portfolios/clock-demo.gif&quot; alt=&quot;clock_demo&quot;&gt;&lt;br&gt;a fancy iOS swift 3 clock component.&lt;br&gt;background transparent, works in &amp;amp; with multi-storyboard.&lt;br&gt;supported auto-layout.&lt;br&gt;
+&lt;p&gt;&lt;img src=&quot;/2017/01/06/portfolios/clock-demo.gif&quot; alt=&quot;clock_demo&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;a fancy iOS swift 3 clock component.&lt;br&gt;background transparent, works in &amp;amp; with multi-storyboard.&lt;br&gt;supported auto-layout.&lt;br&gt;&lt;/p&gt;&lt;br&gt;
     
     </summary>
     
