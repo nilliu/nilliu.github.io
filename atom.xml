@@ -498,12 +498,12 @@
     <link href="http://yoursite.com/2017/01/06/portfolios/"/>
     <id>http://yoursite.com/2017/01/06/portfolios/</id>
     <published>2017-01-05T17:15:57.000Z</published>
-    <updated>2017-08-18T14:53:16.000Z</updated>
+    <updated>2017-08-18T15:01:21.000Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><h3 id="iOS-App-Develop-amp-Design"><a href="#iOS-App-Develop-amp-Design" class="headerlink" title="iOS App Develop &amp; Design"></a>iOS App Develop &amp; Design</h3><p><a href="https://appsto.re/tw/Zcqchb.i" target="_blank" rel="external"><img src="/2017/01/06/portfolios/luv_calc.png" alt="luv_calc"></a></p>
 <p style="text-align: center;"><br><a href="https://appsto.re/tw/Zcqchb.i" target="_blank" rel="external">https://appsto.re/tw/Zcqchb.i</a><br>KEYWORD: <code>luv</code> <code>calc</code><br></p>
 
-<p>[<img src="/2017/01/06/portfolios/clock_demo.gif" alt="clock_demo">]<br>a fancy iOS swift 3 clock component.<br>background transparent, works in &amp; with multi-storyboard.<br>supported auto-layout.<br><a id="more"></a></p>
+<p>[<img src="/2017/01/06/portfolios/clock-demo.gif" alt="clock_demo">]<br>a fancy iOS swift 3 clock component.<br>background transparent, works in &amp; with multi-storyboard.<br>supported auto-layout.<br><a id="more"></a></p>
 <h3 id="SketchUp-3D-modeling"><a href="#SketchUp-3D-modeling" class="headerlink" title="SketchUp 3D modeling"></a>SketchUp 3D modeling</h3><p><img src="sketchUp-washer-self.jpg" alt="sketchUp-washer-self"><br><img src="院子規劃-方案5-出圖用.jpg" alt="院子規劃-方案5-出圖用"></p>
 <div class="tip">this is my home at Taiwan</div>
 
@@ -554,7 +554,7 @@ __**2012 NP Team Review**__
       &lt;h3 id=&quot;iOS-App-Develop-amp-Design&quot;&gt;&lt;a href=&quot;#iOS-App-Develop-amp-Design&quot; class=&quot;headerlink&quot; title=&quot;iOS App Develop &amp;amp; Design&quot;&gt;&lt;/a&gt;iOS App Develop &amp;amp; Design&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://appsto.re/tw/Zcqchb.i&quot;&gt;&lt;img src=&quot;/2017/01/06/portfolios/luv_calc.png&quot; alt=&quot;luv_calc&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://appsto.re/tw/Zcqchb.i&quot;&gt;https://appsto.re/tw/Zcqchb.i&lt;/a&gt;&lt;br&gt;KEYWORD: &lt;code&gt;luv&lt;/code&gt; &lt;code&gt;calc&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;[&lt;img src=&quot;/2017/01/06/portfolios/clock_demo.gif&quot; alt=&quot;clock_demo&quot;&gt;]&lt;br&gt;a fancy iOS swift 3 clock component.&lt;br&gt;background transparent, works in &amp;amp; with multi-storyboard.&lt;br&gt;supported auto-layout.&lt;br&gt;
+&lt;p&gt;[&lt;img src=&quot;/2017/01/06/portfolios/clock-demo.gif&quot; alt=&quot;clock_demo&quot;&gt;]&lt;br&gt;a fancy iOS swift 3 clock component.&lt;br&gt;background transparent, works in &amp;amp; with multi-storyboard.&lt;br&gt;supported auto-layout.&lt;br&gt;
     
     </summary>
     
