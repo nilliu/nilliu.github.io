@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-11T10:13:03.000Z</updated>
+  <updated>2017-09-11T10:15:53.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,15 +20,16 @@
     <link href="http://yoursite.com/2017/09/11/oracle-error-ora-04031/"/>
     <id>http://yoursite.com/2017/09/11/oracle-error-ora-04031/</id>
     <published>2017-09-11T10:01:08.000Z</published>
-    <updated>2017-09-11T10:13:03.000Z</updated>
+    <updated>2017-09-11T10:15:53.000Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>今天碰到 oracle 報錯 ORA-04031,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ORA-04031: unable to allocate 400 bytes of shared memory </div><div class="line">(&quot;shared pool&quot;,&quot;select /*+ rule */ bucket_cn...&quot;,&quot;SQLA^337fc737&quot;,&quot;opixpop:kctdef&quot;) [getLotID() INSERT LOT]</div></pre></td></tr></table></figure></p>
-<p>查了一下, 發現是<br>共用記憶體太小, 分配給共用池的記憶體不足以滿足使用者請求<br>或者存在一定碎片, 沒有有效的利用保留區, 造成無法分配合適的共用區<br>一個Oracle的系統全域區域(SGA)包含幾個記憶體區域<br>(包括緩衝快取記憶體、共用池、JAVA 池、大型池和重做日誌緩衝)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">相關的查看指令如下:</div></pre></td></tr></table></figure></p>
-<p>sql&gt; show sga; //查看SGA的具體大小資訊<br>sql&gt; show parameter sga_max_size //查看SGA最大值<br>sql&gt; show parameter shared_pool //查看共用記憶體<br>sql&gt; show parameter db_cache //查看資料緩存<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">相關的修改參數設定指令如下:</div></pre></td></tr></table></figure></p>
-<p>sql&gt; alter system set sga_max_size = 640M scope=spfile; //修改SGA最大值<br>sql&gt; alter system set shared_pool_size = 128M scope=spfile; //修改共用記憶體<br>sql&gt; alter system set db_cache_size = 256M scope=spfile; //修改資料緩存<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">再然後, 試著修改 `sga_max_size` 時出錯,</div></pre></td></tr></table></figure></p>
-<p>ORA-32001: write to SPFILE requested but no SPFILE is in use<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">媽呀~~~原來是這個 instance 連 spfile 都沒建,</div><div class="line">趕緊的從 pfile 建一個 spfile.</div></pre></td></tr></table></figure></p>
-<p>SQL&gt; create spfile from pfile;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">重啟一下, 讓它用 spfile 啟動</div></pre></td></tr></table></figure></p>
-<p>shutdown immediate<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">startup</div></pre></td></tr></table></figure></p>
+<p>查了一下, 發現是<br>共用記憶體太小, 分配給共用池的記憶體不足以滿足使用者請求<br>或者存在一定碎片, 沒有有效的利用保留區, 造成無法分配合適的共用區<br>一個Oracle的系統全域區域(SGA)包含幾個記憶體區域<br>(包括緩衝快取記憶體、共用池、JAVA 池、大型池和重做日誌緩衝)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SGA=db_cache+shared_pool+java_pool+large_pool</div></pre></td></tr></table></figure></p>
+<p>相關的查看指令如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sql&gt; show sga; //查看SGA的具體大小資訊</div><div class="line">sql&gt; show parameter sga_max_size //查看SGA最大值</div><div class="line">sql&gt; show parameter shared_pool //查看共用記憶體</div><div class="line">sql&gt; show parameter db_cache //查看資料緩存</div></pre></td></tr></table></figure></p>
+<p>相關的修改參數設定指令如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sql&gt; alter system set sga_max_size = 640M scope=spfile; //修改SGA最大值</div><div class="line">sql&gt; alter system set shared_pool_size = 128M scope=spfile; //修改共用記憶體</div><div class="line">sql&gt; alter system set db_cache_size = 256M scope=spfile; //修改資料緩存</div></pre></td></tr></table></figure></p>
+<p>再然後, 試著修改 <code>sga_max_size</code> 時出錯,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ORA-32001: write to SPFILE requested but no SPFILE is in use</div></pre></td></tr></table></figure></p>
+<p>媽呀~~~原來是這個 instance 連 spfile 都沒建,<br>趕緊的從 pfile 建一個 spfile.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SQL&gt; create spfile from pfile;</div></pre></td></tr></table></figure></p>
+<p>重啟一下, 讓它用 spfile 啟動<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">shutdown immediate</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">startup</div></pre></td></tr></table></figure>
 <p>接著就可以執行上面提到的修改 <code>sga_max_size</code>的指令了.</p>
 ]]></content>
     
