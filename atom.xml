@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-11T10:16:50.000Z</updated>
+  <updated>2017-09-11T13:18:45.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/09/11/oracle-error-ora-04031/"/>
     <id>http://yoursite.com/2017/09/11/oracle-error-ora-04031/</id>
     <published>2017-09-11T10:01:08.000Z</published>
-    <updated>2017-09-11T10:16:50.000Z</updated>
+    <updated>2017-09-11T13:18:45.000Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>今天碰到 oracle 報錯 ORA-04031,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ORA-04031: unable to allocate 400 bytes of shared memory </div><div class="line">(&quot;shared pool&quot;,&quot;select /*+ rule */ bucket_cn...&quot;,&quot;SQLA^337fc737&quot;,&quot;opixpop:kctdef&quot;) [getLotID() INSERT LOT]</div></pre></td></tr></table></figure></p>
 <p>查了一下, 發現是<br>共用記憶體太小, 分配給共用池的記憶體不足以滿足使用者請求<br>或者存在一定碎片, 沒有有效的利用保留區, 造成無法分配合適的共用區<br>一個Oracle的系統全域區域(SGA)包含幾個記憶體區域<br>(包括緩衝快取記憶體、共用池、JAVA 池、大型池和重做日誌緩衝)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SGA=db_cache+shared_pool+java_pool+large_pool</div></pre></td></tr></table></figure></p>
@@ -30,7 +30,12 @@
 <p>媽呀~~~原來是這個 instance 連 spfile 都沒建,<br>趕緊的從 pfile 建一個 spfile.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sql&gt; create spfile from pfile;</div></pre></td></tr></table></figure></p>
 <p>重啟一下, 讓它用 spfile 啟動<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">shutdown immediate</div></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">startup</div></pre></td></tr></table></figure>
-<p>接著就可以執行上面提到的修改 <code>sga_max_size</code>的指令了.</p>
+<p>接著就可以執行上面提到的修改 <code>sga_max_size</code> 的指令了.</p>
+<p>備註：<br>pfile 是 init{instance}.ora 的檔案(純文字)<br>spfile 是 spfile{instance}.ora 的檔案(二進制)</p>
+<p>兩者可以切換互相備援<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">create spfile from pfile;</div><div class="line">create pfile from spfile;</div></pre></td></tr></table></figure></p>
+<p>所以如果改了上面的 <code>sga_max_size</code> 然後出現了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SQL&gt; startup</div><div class="line">ORA-00838: Specified value of MEMORY_TARGET is too small, needs to be at least 4848M</div></pre></td></tr></table></figure></p>
+<p>類似這樣的錯誤, 表示你的 <code>memory_target</code> 設置的數字是不合理的(通常是太小)<br>最簡單的方式是重新產生 pfile,<br>因為 pfile 可以編輯, 改完正確參數數值後,<br>再從 pfile 產生 spfile,<br>還是要產生 spfile,<br>因為 spfile 的優先權是比較高的,<br>否則單純下 <code>startup</code> 指令,<br>會用設定數值還是不合理的 spfile 起,<br>一樣會是報錯</p>
+<p>然後 <code>memory_target</code> 的數值如果不知道怎麼算,<br>也可以簡單的設置為 <code>0</code><br>讓 oracle 10g 以上的版本系統自動計算.</p>
 ]]></content>
     
     <summary type="html">
