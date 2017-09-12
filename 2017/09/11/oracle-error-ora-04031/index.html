@@ -12,7 +12,7 @@
 <p>所以如果改了上面的 <code>sga_max_size</code> 然後出現了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SQL&gt; startup</div><div class="line">ORA-00838: Specified value of MEMORY_TARGET is too small, needs to be at least 4848M</div></pre></td></tr></table></figure></p>
 <p>類似這樣的錯誤, 表示你的 <code>memory_target</code> 設置的數字是不合理的(通常是太小)<br>最簡單的方式是重新產生 pfile,<br>因為 pfile 可以編輯, 改完正確參數數值後,<br>再從 pfile 產生 spfile,<br>還是要產生 spfile,<br>因為 spfile 的優先權是比較高的,<br>否則單純下 <code>startup</code> 指令,<br>會用設定數值還是不合理的 spfile 起,<br>一樣會是報錯</p>
 <p>然後 <code>memory_target</code> 的數值如果不知道怎麼算,<br>也可以簡單的設置為 <code>0</code><br>讓 oracle 10g 以上的版本系統自動計算.</p>
-</div></article></div></section><footer><div class="paginator"><a href="/2017/08/06/ubuntu-package-update/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'nilliu';
+</div></article></div></section><footer><div class="paginator"><a href="/2017/09/12/python-osx-install-pyodbc/" class="prev">PREV</a><a href="/2017/08/06/ubuntu-package-update/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'nilliu';
 var disqus_identifier = '2017/09/11/oracle-error-ora-04031/';
 var disqus_title = 'Oracle error ORA-04031 trouble-shooting';
 var disqus_url = 'http://yoursite.com/2017/09/11/oracle-error-ora-04031/';

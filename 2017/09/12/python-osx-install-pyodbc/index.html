@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> install pyodbc on macOS Sierra · nilliu</title><meta name="description" content="install pyodbc on macOS Sierra - Nil"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon-old.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="nilliu"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/2017/01/06/portfolios/" target="_self" class="nav-list-link">PORTFOLIO</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/nilliu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">install pyodbc on macOS Sierra</h1><div class="post-info">Sep 12, 2017</div><div class="post-content"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>由於新版的 os x(macOS) 已經將 sql.h 拿掉了<br>所以直接 <code>pip install pyodbc</code> 時<br>c++ compile 會找不到 header 檔<br>選項就是安裝 iODBC 或是裝 unixODBC<br>但我不想裝 iODBC, 所以選了 unixODBC<br>拜新版 OS X 的 SIP 機制所賜~</p>
+<p>整體來說裝 pyodbc 變的難度高上許多</p>
+<p>簡單記錄一下後來怎麼裝成的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ brew install unixodbc --universal</div><div class="line">$ sudo pip install --upgrade \</div><div class="line">  --global-option=build_ext --global-option=&quot;-I/usr/local/include&quot; \</div><div class="line">  --global-option=&quot;-L/usr/local/lib&quot; pyodbc</div></pre></td></tr></table></figure></p>
+<p>大概是這樣.😓</p>
+</div></article></div></section><footer><div class="paginator"><a href="/2017/09/11/oracle-error-ora-04031/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'nilliu';
+var disqus_identifier = '2017/09/12/python-osx-install-pyodbc/';
+var disqus_title = 'install pyodbc on macOS Sierra';
+var disqus_url = 'http://yoursite.com/2017/09/12/python-osx-install-pyodbc/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//nilliu.disqus.com/count.js" async></script><div class="copyright"><p>© 2016 - 2017 <a href="http://yoursite.com">Nil</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><!--script(async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML")--></body></html><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97730441-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
